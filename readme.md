@@ -4,12 +4,15 @@ Controller >> UserController->index,changeStatus
 View >> users.blade.php
 Route >> users,changeStatus
 
+Commands
+```
 - php artisan tinker (for creating demo database).
 - factory(App\User::class,50)->create(); (Insert Psy Shell)
-
+```
 ## Datatable File export
 
 Add following Resources on view page:
+```
  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"><br />
  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css"><br />
  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script><br />
@@ -20,7 +23,7 @@ Add following Resources on view page:
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script><br />
  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script><br />
  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script><br />
-
+```
 JavaScript part:
 ```
 	$(document).ready(function() {
@@ -40,13 +43,14 @@ Inspired Form : https://medium.com/techcompose/create-rest-api-in-laravel-with-a
 Additional instruction:
 
 In AppServiceProvider inside boot method insert following line:
+```
 Passport::withoutCookieSerialization();
-
+```
 ## Date RangePicker on datatables
-
+```
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> <br />
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><br />
-
+```
 JavaScript Part:
 ```
  $(document).ready(function(){
