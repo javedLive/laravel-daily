@@ -22,7 +22,7 @@ Add following Resources on view page:
  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script><br />
 
 JavaScript part:
-
+```
 	$(document).ready(function() {
 	    $('#myTable').DataTable( {
 	        dom: 'Bfrtip',
@@ -32,7 +32,7 @@ JavaScript part:
 	    } );
 	});
 
-
+```
 ## Create REST API in Laravel with authentication using Passport
 
 Inspired Form : https://medium.com/techcompose/create-rest-api-in-laravel-with-authentication-using-passport-133a1678a876
@@ -44,13 +44,13 @@ Passport::withoutCookieSerialization();
 
 ## Date RangePicker on datatables
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> <br />
 
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><br />
+<script> 
 
 JavaScript Part:
-
+```
  $(document).ready(function(){
     $.fn.dataTable.ext.search.push(
     function (settings, data, dataIndex) {
@@ -75,7 +75,7 @@ JavaScript Part:
             table.draw();
         });
     });
-
+```
 ## Security Vulnerabilities
 
 
