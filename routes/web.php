@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('users', 'UserController@index');
 Route::get('changeStatus', 'UserController@changeStatus');
+
+Route::get('yajra-user-list','UserController@yajraUserList');
+Route::get('yajra-users','UserController@yajraUsers');

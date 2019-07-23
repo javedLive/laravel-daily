@@ -88,28 +88,26 @@ $(document).ready(function() {
 });
 
  $(document).ready(function(){
-        $.fn.dataTable.ext.search.push(
-        function (settings, data, dataIndex) {
-            var min = $('#min').datepicker("getDate");
-            var max = $('#max').datepicker("getDate");
-            var startDate = new Date(data[2]);
-            if (min == null && max == null) { return true; }
-            if (min == null && startDate <= max) { return true;}
-            if(max == null && startDate >= min) {return true;}
-            if (startDate <= max && startDate >= min) { return true; }
-            return false;
-        }
-        );
+  $.fn.dataTable.ext.search.push(
+  function (settings, data, dataIndex) {
+      var min = $('#min').datepicker("getDate");
+      var max = $('#max').datepicker("getDate");
+      var startDate = new Date(data[2]);
+      if (min == null && max == null) { return true; }
+      if (min == null && startDate <= max) { return true;}
+      if(max == null && startDate >= min) {return true;}
+      if (startDate <= max && startDate >= min) { return true; }
+      return false;
+  }
+  );
+      $("#min").datepicker({ onSelect: function () { table.draw(); }, changeMonth: true, changeYear: true });
+      $("#max").datepicker({ onSelect: function () { table.draw(); }, changeMonth: true, changeYear: true });
+      var table = $('#myTable').DataTable();
 
-       
-            $("#min").datepicker({ onSelect: function () { table.draw(); }, changeMonth: true, changeYear: true });
-            $("#max").datepicker({ onSelect: function () { table.draw(); }, changeMonth: true, changeYear: true });
-            var table = $('#myTable').DataTable();
-
-            // Event listener to the two range filtering inputs to redraw on input
-            $('#min, #max').change(function () {
-                table.draw();
-            });
-        });
+      // Event listener to the two range filtering inputs to redraw on input
+      $('#min, #max').change(function () {
+          table.draw();
+      });
+  });
 </script>
 </html>

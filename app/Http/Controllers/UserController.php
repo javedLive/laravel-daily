@@ -5,6 +5,8 @@ use App\User;
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 use Illuminate\Http\Request;
+use DataTables;
+use DB;
 
 class UserController extends Controller
 {
@@ -62,4 +64,16 @@ class UserController extends Controller
         $user = Auth::user(); 
         return response()->json(['success' => $user], $this-> successStatus); 
     } 
+
+    public function yajraUserList()
+    {
+        return view('yajra-users');
+    }
+
+    public function yajraUsers()
+    {
+        $users = DB::table('users')->select('*');
+        return DataTables::of($users)
+            ->make(true);
+    }
 }

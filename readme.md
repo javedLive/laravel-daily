@@ -78,9 +78,9 @@ JavaScript Part:
         });
     });
 ```
-## Security Vulnerabilities
+## Implementing datatables tutorial using yajra package
 
-
+Implementing : https://github.com/yajra/laravel-datatables
 
 ## License
 
